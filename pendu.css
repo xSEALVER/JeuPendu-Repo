@@ -35,7 +35,7 @@ nav a{
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: rgb(0,45,98);
+  color: black;
 }
 
 nav a:hover {
@@ -174,7 +174,6 @@ canvas {
     display: block;
     margin: auto;
     border: 1px solid black;
-    ;
 }
 
 .hide{
