@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body{
+    background-color: rgb(0,45,98);
+}
+
+nav{
+    background-color: rgb(190,192,194);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: black;
+    
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav a:hover {
+    background-color: lightgray;
+}
+
+nav li:first-child{
+    margin-right: auto;
+    
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(190,192,194);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.menu-button{
+    display: none;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+    color: rgb(0,45,98);
+}
+
+
+
+
+input{
+    border-radius: 4rem;
+    border: none;
+}
+
+button{
+    border-radius: 8rem;
+    padding: 8px;
+    background-color: rgb(190,192,194);
+    color: black;
+
+}
+
+.container{
+    font-size: 16px;
+    background-color: white;
+    width: 90vw;
+    max-width: 34em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 0.6rem;
+    box-shadow: 0 1.2em, 2.4em rgba(111, 85, 0, 0.25);
+
+}
+
+#options-container{
+    text-align: center;
+
+}
+
+#options-container div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2rem 0 2.4em 0;
+    
+}
+
+#options-container button{
+    padding: 0.6em 1.2em;
+    border: 3px solid black;
+    background-color: white;
+    color: black;
+    border-radius: 0.3em;
+    text-transform: capitalize;
+}
+
+#options-container button:disabled {
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #efefef;
+    
+}
+
+#options-container button.active {
+    border: 3px solid black;
+    color: rgb(0,45,98);
+    background-color: #f4c531;
+    
+}
+
+.letter-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
+}
+
+#letter-container button{
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 0.3em;
+    background-color: white;
+}
+
+.new-game-popup {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.6em;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.hide{
+    display: none;
+}
+
+#user-input-section {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
+    margin: 0.6em 0 1.2em 0;
+    gap: 10px;
+}
+
+#result-text h2{
+    font-size: 1.8em;
+    text-align: center;
+
+}
+
+#result-text p{
+    font-size: 1.25em;
+    margin: 1em 0 2em;
+
+}
+
+#result-text span{
+    font-weight: 600;
+}
+
+#new-game-button {
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    background-color: rgb(0,45,98);
+    border: 3px solid rgb(190,192,194);
+    color: rgb(253,187,48);
+    border-radius: 0.2em;
+}
+
+.win-msg{
+    color: #39d78d;
+}
+
+.love-msg{
+    color: #fe5152;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: #05090E;
+    margin-top: 39rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: rgb(190,192,194);
+    font-size: 14px;
+    font-family: raleway;
+}
+
+
+@media (max-width: 432px) {
+    .hideOnMobile{
+        display: none;
+    }
+
+    .menu-button{
+        display: block;
+    }
+
+    footer{
+        width: 100%;
+        height: 50px;
+        background-color: #05090E;
+        margin-top: 52rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+}
+
+@media (max-width: 430px) {
+    .sidebar{
+        width: 100%;
+    }
+}
